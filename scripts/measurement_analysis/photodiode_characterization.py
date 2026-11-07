@@ -107,6 +107,7 @@ ax1.grid()
 # plot 2 - I-V curve
 plt.figure()
 plt.plot(V, I * 1e3, color="blue")
+plt.fill_between([0, Vmp], 0, Imp * 1e3, color="green", alpha=0.25)   # MPP rectangle (area = Pmax)
 plt.plot(Vmp, Imp * 1e3, "ko")
 plt.plot([Vmp, Vmp], [0, Imp * 1e3], "--", color="gray")
 plt.plot([0, Vmp], [Imp * 1e3, Imp * 1e3], "--", color="gray")
