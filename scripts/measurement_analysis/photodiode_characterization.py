@@ -5,16 +5,17 @@ from pathlib import Path
 plt.close("all")
 
 # laser optical power
-laser_power = -3
+laser_power = 9
 
 # photodiode config
-config = 3
+config = 9
 
 measurements = {
     -3: "laser_minus_3dBm",
     0: "laser_0dBm",
     3: "laser_3dBm",
     6: "laser_6dBm",
+    9: "laser_9dBm",
 }
 measurement = measurements[laser_power]
 
@@ -22,6 +23,7 @@ csv_files = {
     1: "photodiode_characterization_1.csv",
     3: "photodiode_characterization_3_in_series.csv",
     4: "photodiode_characterization_4_in_series.csv",
+    9: "photodiode_characterization_3_in_series_9dBm.csv"
 }
 csv_name = csv_files[config]
 
